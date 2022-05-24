@@ -1,3 +1,17 @@
+<!--
+============================================
+; Title: Assignment 1.5 - Components
+; File Name: app.component.html
+; Author: Professor Krasso
+; Date: 29 May 2022
+; Modified By: Seth Kerrey
+; Description:
+;   Angular components
+; Resources:
+;   buwebdev, Professor Krasso, Bellevue University
+===========================================
+-->
+
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 
   <ul class="navbar-nav">
@@ -8,7 +22,7 @@
       <a href="#" class="nav-link">About</a>
     </li>
     <li class="nav-item">
-      <a href="#" class="nav-link">Contact Us</a>
+      <a href="#" class="nav-link">Contact</a>
     </li>
   </ul>
 
@@ -16,18 +30,17 @@
 
 <div class="container">
   <br><br>
-  <h2>Exercise 1.2 - Hello World!</h2>
+  <h2>{{ assignment}}</h2>
 
   <div class="row">
-    <div class="col-sm-6">
-      <div class="alert alert-success">
 
-      </div>
-    </div>
     <div class="col-sm-6">
-      <div class="alert alert-success">
-
-      </div>
+      <app-my-image></app-my-image>
     </div>
+
+    <div class="col-sm-6">
+      <app-my-details></app-my-details>
+    </div>
+
   </div>
 </div>
