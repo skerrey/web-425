@@ -5,7 +5,10 @@
 ; Author: Professor Krasso
 ; Date: 29 May 2022
 ; Modified By: Seth Kerrey
-; Description: TypeScript app component
+; Description:
+;   TypeScript app component
+; Resources:
+;   buwebdev, Professor Krasso, Bellevue University
 ===========================================
 */
 

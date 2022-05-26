@@ -1,3 +1,17 @@
+/**
+============================================
+; Title: Exercise 1.2 - Hello World!
+; File Name: app.component.ts
+; Author: Professor Krasso
+; Date: 29 May 2022
+; Modified By: Seth Kerrey
+; Description:
+;   App components TypeScript
+; Resources:
+;   buwebdev, Professor Krasso, Bellevue University
+===========================================
+*/
+
 import { Component } from '@angular/core';
 
 @Component({
