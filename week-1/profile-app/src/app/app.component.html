@@ -1,9 +1,9 @@
 <!--
 ============================================
-; Title: Assignment 1.5 - Components
+; Title: Exercise 2.3 - Data Binding
 ; File Name: app.component.html
 ; Author: Professor Krasso
-; Date: 29 May 2022
+; Date: 5 June 2022
 ; Modified By: Seth Kerrey
 ; Description:
 ;   App components
@@ -32,7 +32,7 @@
   <br><br>
   <h2>{{ assignment}}</h2>
 
-  <div class="row">
+  <div class="row" *ngIf="isLoggedIn; else showError">
 
     <div class="col-sm-6">
       <app-my-image></app-my-image>
@@ -43,4 +43,15 @@
     </div>
 
   </div>
+
+  <ng-template #showError>
+    <div class="row">
+      <div class="col-sm-12">
+        <h4 class="alert alert-danger">
+          You are not authorized to view this content.
+        </h4>
+      </div>
+    </div>
+  </ng-template>
+
 </div>

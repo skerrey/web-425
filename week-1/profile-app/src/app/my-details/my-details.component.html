@@ -1,9 +1,9 @@
 <!--
 ============================================
-; Title: Assignment 1.5 - Components
+; Title: Exercise 2.3 - Data Binding
 ; File Name: my-details.component.html
 ; Author: Professor Krasso
-; Date: 29 May 2022
+; Date: 5 June 2022
 ; Modified By: Seth Kerrey
 ; Description:
 ;   Details component HTML
@@ -13,7 +13,13 @@
 -->
 
 <ul class="list-group">
-  <li class="list-group-item">Name: Seth Kerrey</li>
-  <li class="list-group-item">Favorite food: Calamari</li>
-  <li class="list-group-item">Favorite color: Teal</li>
+  <li class="list-group-item">Name: {{ myProfile.fullName }}</li>
+  <li class="list-group-item">Favorite food: {{ myProfile.favoriteFood }}</li>
+  <li class="list-group-item">Favorite color: {{ myProfile.favoriteColor }}</li>
+  <li class="list-group-item">
+    Keywords:
+    <span *ngFor="let word of myProfile.keywords"> <!-- Loop over keyword array from my-details.component.ts-->
+      {{ word }}
+    </span>
+  </li>
 </ul>
