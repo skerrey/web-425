@@ -1,3 +1,17 @@
+/**
+============================================
+; Title: Exercise 2.2 - Navigation
+; File Name: app.module.ts
+; Author: Professor Krasso
+; Date: 5 June 2022
+; Modified By: Seth Kerrey
+; Description:
+;   app module for my-app
+; Resources:
+;   buwebdev, Professor Krasso, Bellevue University
+===========================================
+*/
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
