@@ -1,3 +1,17 @@
+/**
+============================================
+; Title: Assignment 2.4 - Routing in Action
+; File Name: app.module.ts
+; Author: Professor Krasso
+; Date: 5 June 2022
+; Modified By: Seth Kerrey
+; Description:
+;   app module TypeScript for composer-app
+; Resources:
+;   buwebdev, Professor Krasso, Bellevue University
+===========================================
+*/
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
