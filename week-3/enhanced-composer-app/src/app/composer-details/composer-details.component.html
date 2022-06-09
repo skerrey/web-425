@@ -1,1 +1,28 @@
-<p>composer-details works!</p>
+<!--
+============================================
+; Title: Exercise 3.2 - Passing Data to Routes, Part 1
+; File Name: composer-details.component.html
+; Author: Professor Krasso
+; Date: 12 June 2022
+; Modified By: Seth Kerrey
+; Description:
+;   composer-details component html for enhanced-composer-app
+; Resources:
+;   buwebdev, Professor Krasso, Bellevue University
+===========================================
+-->
+
+<div class="row">
+  <div class="col-sm-12">
+
+    <ul class="list-group">
+      <li class="list-group-item">Composer ID: {{ composer.composerId }}</li>
+      <li class="list-group-item">Full name: {{ composer.fullName }}</li>
+      <li class="list-group-item">Genre: {{ composer.genre }}</li>
+    </ul>
+    <br>
+
+    <a routerLink="/composer-list" class="btn btn-secondary" role="button">Return to Composers</a>
+
+  </div>
+</div>
