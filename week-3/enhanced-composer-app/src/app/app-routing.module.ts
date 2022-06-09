@@ -1,7 +1,7 @@
 /**
 ============================================
 ; Title: Exercise 3.2 - Passing Data to Routes, Part 1
-; File Name: app.module.ts
+; File Name: app-routing.module.ts
 ; Author: Professor Krasso
 ; Date: 12 June 2022
 ; Modified By: Seth Kerrey
