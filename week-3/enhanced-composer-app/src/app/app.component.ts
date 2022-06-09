@@ -1,9 +1,9 @@
 /**
 ============================================
-; Title: Assignment 2.4 - Routing in Action
+; Title: Exercise 3.2 - Passing Data to Routes
 ; File Name: app.component.ts
 ; Author: Professor Krasso
-; Date: 5 June 2022
+; Date: 12 June 2022
 ; Modified By: Seth Kerrey
 ; Description:
 ;   app component TypeScript for composer-app
@@ -20,5 +20,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Composer App';
+  title = 'Enhanced Composer App';
+  assignment = 'Exercise 3.2 - Passing Data to Routes, Part 1'
 }
