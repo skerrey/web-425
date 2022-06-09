@@ -1,12 +1,12 @@
 /**
 ============================================
-; Title: Exercise 3.2 - Passing Data to Routes
+; Title: Exercise 3.2 - Passing Data to Routes, Part 1
 ; File Name: app.component.ts
 ; Author: Professor Krasso
 ; Date: 12 June 2022
 ; Modified By: Seth Kerrey
 ; Description:
-;   app component TypeScript for composer-app
+;   app component TypeScript for enhanced-composer-app
 ; Resources:
 ;   buwebdev, Professor Krasso, Bellevue University
 ===========================================

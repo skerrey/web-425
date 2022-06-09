@@ -1,12 +1,12 @@
 /**
 ============================================
-; Title: Assignment 2.4 - Routing in Action
+; Title: Exercise 3.2 - Passing Data to Routes, Part 1
 ; File Name: app.module.ts
 ; Author: Professor Krasso
-; Date: 5 June 2022
+; Date: 12 June 2022
 ; Modified By: Seth Kerrey
 ; Description:
-;   app module TypeScript for composer-app
+;   app module TypeScript for enhanced-composer-app
 ; Resources:
 ;   buwebdev, Professor Krasso, Bellevue University
 ===========================================
