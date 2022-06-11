@@ -1,1 +1,40 @@
-<p>sign-in works!</p>
+<!--
+============================================
+; Title: Exercise 3.3 - Passing Data to Routes, Part 2
+; File Name: sign-in.component.html
+; Author: Professor Krasso
+; Date: 12 June 2022
+; Modified By: Seth Kerrey
+; Description:
+;   sign-in component html for secure-profile-app
+; Resources:
+;   buwebdev, Professor Krasso, Bellevue University
+===========================================
+-->
+
+<div class="card signin-container">
+
+  <div class="card-body">
+
+    <h3 class="card-title">Sign in</h3>
+
+    <form class="card-text">
+
+      <div class="form-group">
+        <label for="txtUserName">Username</label>
+        <input type="text" class="form-control" id="txtUserName" placeholder="Enter your username" />
+      </div>
+      <div class="form-group">
+        <label for="txtPassword">Password</label>
+        <input type="password" class="form-control" id="txtPassword" placeholder="Enter your password" />
+      </div>
+      <br>
+      <div class="form-group">
+        <button class="btn btn-primary float-end" (click)="signin()">Submit</button>
+      </div>
+
+    </form>
+
+  </div>
+
+</div>
