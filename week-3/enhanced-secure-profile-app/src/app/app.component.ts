@@ -1,6 +1,6 @@
 /**
 ============================================
-; Title: Exercise 3.3 - Passing Data to Routes, Part 2
+; Title: Assignment 3.4 - Guarding Routes
 ; File Name: app.component.ts
 ; Author: Professor Krasso
 ; Date: 12 June 2022
@@ -20,6 +20,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title: string = "Secure Profile App";
-  assignment: string = "Exercise 3.3 - Passing Data to Routes, Part 2";
+  title: string = "Enhanced Secure Profile App";
+  assignment: string = "Assignment 3.4 - Guarding Routes";
 }
