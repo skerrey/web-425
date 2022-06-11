@@ -1,0 +1,19 @@
+/*
+============================================
+; Title: Exercise 3.3 - Passing Data to Routes, Part 2
+; File Name: sign-in.component.css
+; Author: Professor Krasso
+; Date: 12 June 2022
+; Modified By: Seth Kerrey
+; Description:
+;   sign-in component styling secure-profile-app
+; Resources:
+;   buwebdev, Professor Krasso, Bellevue University
+===========================================
+*/
+
+.signin-container {
+  width: 35%;
+  margin: 0 auto;
+  margin-top: 10%;
+}
