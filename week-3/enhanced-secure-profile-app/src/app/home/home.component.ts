@@ -1,7 +1,7 @@
 /**
 ============================================
-; Title: Exercise 3.3 - Passing Data to Routes, Part 2
-; File Name: app.component.ts
+; Title: Assignment 3.4 - Guarding Routes
+; File Name: home.component.ts
 ; Author: Professor Krasso
 ; Date: 12 June 2022
 ; Modified By: Seth Kerrey
@@ -13,7 +13,6 @@
 */
 
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -22,11 +21,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  isLoggedIn: Boolean;
-
-  constructor(private route: ActivatedRoute) { // passing login info values
-    this.isLoggedIn = Boolean(this.route.snapshot.queryParamMap.get('isLoggedIn'));
-   }
+  constructor() { }
 
   ngOnInit(): void {
   }
