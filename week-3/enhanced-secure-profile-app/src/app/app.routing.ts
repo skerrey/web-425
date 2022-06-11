@@ -1,6 +1,6 @@
 /**
 ============================================
-; Title: Exercise 3.3 - Passing Data to Routes, Part 2
+; Title: Assignment 3.4 - Guarding Routes
 ; File Name: app.routing.ts
 ; Author: Professor Krasso
 ; Date: 12 June 2022
@@ -15,6 +15,7 @@
 import { Routes } from "@angular/router";
 import { HomeComponent } from "./home/home.component";
 import { SignInComponent } from "./sign-in/sign-in.component";
+import { SignInGuard } from "./sign-in.guard";
 
 export const AppRoutes: Routes = [
   {
@@ -23,6 +24,7 @@ export const AppRoutes: Routes = [
   },
   {
     path: 'home',
+    canActivate: [SignInGuard], // route guard for sign in
     component: HomeComponent
   }
 ]
