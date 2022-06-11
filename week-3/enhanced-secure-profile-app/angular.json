@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "secure-profile-app": {
+    "enhanced-secure-profile-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/secure-profile-app",
+            "outputPath": "dist/enhanced-secure-profile-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "secure-profile-app:build:production"
+              "browserTarget": "enhanced-secure-profile-app:build:production"
             },
             "development": {
-              "browserTarget": "secure-profile-app:build:development"
+              "browserTarget": "enhanced-secure-profile-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "secure-profile-app:build"
+            "browserTarget": "enhanced-secure-profile-app:build"
           }
         },
         "test": {
@@ -106,5 +106,5 @@
       }
     }
   },
-  "defaultProject": "secure-profile-app"
+  "defaultProject": "enhanced-secure-profile-app"
 }
