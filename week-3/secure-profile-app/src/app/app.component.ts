@@ -1,12 +1,12 @@
 /**
 ============================================
-; Title: Exercise 2.3 - Data Binding
+; Title: Exercise 3.3 - Passing Data to Routes, Part 2
 ; File Name: app.component.ts
 ; Author: Professor Krasso
-; Date: 5 June 2022
+; Date: 12 June 2022
 ; Modified By: Seth Kerrey
 ; Description:
-;   TypeScript app component
+;   App component TypeScript for secure-profile-app
 ; Resources:
 ;   buwebdev, Professor Krasso, Bellevue University
 ===========================================
@@ -20,6 +20,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  isLoggedIn: Boolean = true;
-  assignment: string = "Exercise 2.3 - Data Binding";
+  title: string = "Secure Profile App";
+  assignment: string = "Exercise 3.3 - Passing Data to Routes, Part 2";
 }
