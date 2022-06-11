@@ -1,57 +1,15 @@
 <!--
 ============================================
-; Title: Exercise 2.3 - Data Binding
+; Title: Exercise 3.3 - Passing Data to Routes, Part 2
 ; File Name: app.component.html
 ; Author: Professor Krasso
-; Date: 5 June 2022
+; Date: 12 June 2022
 ; Modified By: Seth Kerrey
 ; Description:
-;   App components
+;   App component html for secure-profile-app
 ; Resources:
 ;   buwebdev, Professor Krasso, Bellevue University
 ===========================================
 -->
 
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-
-  <ul class="navbar-nav">
-    <li class="nav-item active">
-      <a href="#" class="nav-link">Home</a>
-    </li>
-    <li class="nav-item">
-      <a href="#" class="nav-link">About</a>
-    </li>
-    <li class="nav-item">
-      <a href="#" class="nav-link">Contact</a>
-    </li>
-  </ul>
-
-</nav>
-
-<div class="container">
-  <br><br>
-  <h2>{{ assignment}}</h2>
-
-  <div class="row" *ngIf="isLoggedIn; else showError">
-
-    <div class="col-sm-6">
-      <app-my-image></app-my-image>
-    </div>
-
-    <div class="col-sm-6">
-      <app-my-details></app-my-details>
-    </div>
-
-  </div>
-
-  <ng-template #showError>
-    <div class="row">
-      <div class="col-sm-12">
-        <h4 class="alert alert-danger">
-          You are not authorized to view this content.
-        </h4>
-      </div>
-    </div>
-  </ng-template>
-
-</div>
+<router-outlet></router-outlet>
