@@ -1,1 +1,57 @@
-<p>home works!</p>
+<!--
+============================================
+; Title: Exercise 3.3 - Passing Data to Routes, Part 2
+; File Name: home.component.html
+; Author: Professor Krasso
+; Date: 12 June 2022
+; Modified By: Seth Kerrey
+; Description:
+;   home component html for secure-profile-app
+; Resources:
+;   buwebdev, Professor Krasso, Bellevue University
+===========================================
+-->
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+
+  <ul class="navbar-nav">
+    <li class="nav-item active">
+      <a href="#" class="nav-link">Home</a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link">About</a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link">Contact</a>
+    </li>
+  </ul>
+
+</nav>
+
+<div class="container">
+  <br><br>
+  <h2>Exercise 3.3 - Passing Data to Routes, Part 2</h2>
+
+  <div class="row" *ngIf="isLoggedIn; else showError">
+
+    <div class="col-sm-6">
+      <app-my-image></app-my-image>
+    </div>
+
+    <div class="col-sm-6">
+      <app-my-details></app-my-details>
+    </div>
+
+  </div>
+
+  <ng-template #showError>
+    <div class="row">
+      <div class="col-sm-12">
+        <h4 class="alert alert-danger">
+          You are not authorized to view this content.
+        </h4>
+      </div>
+    </div>
+  </ng-template>
+
+</div>
