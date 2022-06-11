@@ -1,12 +1,12 @@
 /**
 ============================================
-; Title: Assignment 1.5 - Componenets
+; Title: Exercise 3.3 - Passing Data to Routes, Part 2
 ; File Name: app.module.ts
 ; Author: Professor Krasso
-; Date: 29 May 2022
+; Date: 12 June 2022
 ; Modified By: Seth Kerrey
 ; Description:
-;   App module TypeScript
+;   App module for secure-profile-app
 ; Resources:
 ;   buwebdev, Professor Krasso, Bellevue University
 ===========================================
@@ -20,6 +20,8 @@ import { MyImageComponent } from './my-image/my-image.component';
 import { MyDetailsComponent } from './my-details/my-details.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { HomeComponent } from './home/home.component';
+import { AppRoutes } from './app.routing';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { HomeComponent } from './home/home.component';
     HomeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(AppRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
