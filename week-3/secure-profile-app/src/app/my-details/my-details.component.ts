@@ -6,7 +6,7 @@
 ; Date: 5 June 2022
 ; Modified By: Seth Kerrey
 ; Description:
-;   my-details component TypeScript
+;   my-details component TypeScript for secure-profile-app
 ; Resources:
 ;   buwebdev, Professor Krasso, Bellevue University
 ===========================================

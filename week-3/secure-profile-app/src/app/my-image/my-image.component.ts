@@ -6,7 +6,7 @@
 ; Date: 29 May 2022
 ; Modified By: Seth Kerrey
 ; Description:
-;   my-image component TypeScript
+;   my-image component TypeScript for secure-profile-app
 ; Resources:
 ;   buwebdev, Professor Krasso, Bellevue University
 ===========================================
