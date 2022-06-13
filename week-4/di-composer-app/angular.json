@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "enhanced-composer-app": {
+    "di-composer-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/enhanced-composer-app",
+            "outputPath": "dist/di-composer-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -73,10 +73,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "enhanced-composer-app:build:production"
+              "browserTarget": "di-composer-app:build:production"
             },
             "development": {
-              "browserTarget": "enhanced-composer-app:build:development"
+              "browserTarget": "di-composer-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -84,7 +84,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "enhanced-composer-app:build"
+            "browserTarget": "di-composer-app:build"
           }
         },
         "test": {
@@ -107,5 +107,5 @@
       }
     }
   },
-  "defaultProject": "enhanced-composer-app"
+  "defaultProject": "di-composer-app"
 }
