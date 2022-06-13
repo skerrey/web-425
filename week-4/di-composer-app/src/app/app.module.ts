@@ -6,7 +6,7 @@
 ; Date: 12 June 2022
 ; Modified By: Seth Kerrey
 ; Description:
-;   app module TypeScript for enhanced-composer-app
+;   app module TypeScript
 ; Resources:
 ;   buwebdev, Professor Krasso, Bellevue University
 ===========================================

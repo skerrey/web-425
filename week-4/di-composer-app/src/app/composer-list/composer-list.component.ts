@@ -6,7 +6,7 @@
 ; Date: 12 June 2022
 ; Modified By: Seth Kerrey
 ; Description:
-;   composer-list component TypeScript for enhanced-composer-app
+;   composer-list component TypeScript for app
 ; Resources:
 ;   buwebdev, Professor Krasso, Bellevue University
 ;   Stack Overflow Array in Angular

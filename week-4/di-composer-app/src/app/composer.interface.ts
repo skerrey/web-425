@@ -6,7 +6,7 @@
 ; Date: 12 June 2022
 ; Modified By: Seth Kerrey
 ; Description:
-;   composer interface TypeScript for enhanced-composer-app
+;   composer interface TypeScript for app
 ; Resources:
 ;   buwebdev, Professor Krasso, Bellevue University
 ===========================================

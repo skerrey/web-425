@@ -6,7 +6,7 @@
 ; Date: 5 June 2022
 ; Modified By: Seth Kerrey
 ; Description:
-;   about component TypeScript for composer-app
+;   about component TypeScript for app
 ; Resources:
 ;   buwebdev, Professor Krasso, Bellevue University
 ===========================================

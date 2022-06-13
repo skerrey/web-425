@@ -6,7 +6,7 @@
 ; Date: 12 June 2022
 ; Modified By: Seth Kerrey
 ; Description:
-;   app routing TypeScript for enhanced-composer-app
+;   app routing TypeScript
 ; Resources:
 ;   buwebdev, Professor Krasso, Bellevue University
 ===========================================
