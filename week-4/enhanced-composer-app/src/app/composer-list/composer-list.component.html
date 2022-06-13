@@ -1,0 +1,35 @@
+<!--
+============================================
+; Title: Exercise 3.2 - Passing Data to Routes, Part 1
+; File Name: composer-list.component.html
+; Author: Professor Krasso
+; Date: 12 June 2022
+; Modified By: Seth Kerrey
+; Description:
+;   composer-list component html for enhanced-composer-app
+; Resources:
+;   buwebdev, Professor Krasso, Bellevue University
+===========================================
+-->
+
+<table class="table table-hover table-bordered">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">Composer ID</th>
+      <th scope="col">Full Name</th>
+      <th scope="col">Genre</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let composer of composers"> <!-- Loop over composer array from composer-list.component.ts-->
+      <td>
+        <a routerLink="/composer-details/{{ composer.composerId }}" class="underline">
+          {{ composer.composerId }}
+        </a>
+      </td>
+      <td>{{ composer.fullName }}</td>
+      <td>{{ composer.genre }}</td>
+    </tr>
+  </tbody>
+</table>
+
