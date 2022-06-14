@@ -1,9 +1,9 @@
 /**
 ============================================
-; Title: Exercise 3.2 - Passing Data to Routes, Part 1
+; Title: Exercise 4.2 - Inversion of Control and Dependency Injection
 ; File Name: composer-list.component.ts
 ; Author: Professor Krasso
-; Date: 12 June 2022
+; Date: 19 June 2022
 ; Modified By: Seth Kerrey
 ; Description:
 ;   composer-list component TypeScript for app
@@ -16,7 +16,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { IComposer } from '../composer.interface';
-import { Composer } from '../composer.class';
+import { ComposerService } from '../composer.service';
 
 @Component({
   selector: 'app-composer-list',
@@ -27,8 +27,8 @@ export class ComposerListComponent implements OnInit {
 
   composers: Array<IComposer>;
 
-  constructor() {
-    this.composers = new Composer().getComposers();
+  constructor(private composerService: ComposerService) { // injectable class added to constructor
+    this.composers = this.composerService.getComposers(); // dependency injection to  create new class
    }
 
   ngOnInit(): void {

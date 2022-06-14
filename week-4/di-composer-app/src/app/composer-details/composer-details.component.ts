@@ -1,9 +1,9 @@
 /**
 ============================================
-; Title: Exercise 3.2 - Passing Data to Routes, Part 1
+; Title: Exercise 4.2 - Inversion of Control and Dependency Injection
 ; File Name: composer-details.component.ts
 ; Author: Professor Krasso
-; Date: 12 June 2022
+; Date: 19 June 2022
 ; Modified By: Seth Kerrey
 ; Description:
 ;   composer-details component TypeScript for app
@@ -14,7 +14,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { IComposer } from '../composer.interface';
-import { Composer } from '../composer.class';
+import { ComposerService } from '../composer.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -27,11 +27,11 @@ export class ComposerDetailsComponent implements OnInit {
   composerId: number;
   composer: IComposer;
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute, private composerService: ComposerService) {
     this.composerId = parseInt(this.route.snapshot.paramMap.get('composerId')!, 10);
 
     if (this.composerId) {
-      this.composer = new Composer().getComposer(this.composerId)!;
+      this.composer = this.composerService.getComposer(this.composerId)!;
     }
   }
 

@@ -1,9 +1,9 @@
 /**
 ============================================
-; Title: Exercise 3.2 - Passing Data to Routes, Part 1
+; Title: Exercise 4.2 - Inversion of Control and Dependency Injection
 ; File Name: app.component.ts
 ; Author: Professor Krasso
-; Date: 12 June 2022
+; Date: 19 June 2022
 ; Modified By: Seth Kerrey
 ; Description:
 ;   TypeScript component for app
@@ -20,6 +20,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Enhanced Composer App';
-  assignment = 'Exercise 3.2 - Passing Data to Routes, Part 1'
+  title: string = 'Di Composer App';
+  assignment: string = 'Exercise 4.2 - Inversion of Control and Dependency Injection'
 }
