@@ -1,0 +1,21 @@
+/*
+============================================
+; Title: Exercise 3.2 - Passing Data to Routes, Part 1
+; File Name: composer-list.component.css
+; Author: Professor Krasso
+; Date: 12 June 2022
+; Modified By: Seth Kerrey
+; Description:
+;   composer-list component css for app
+; Resources:
+;   buwebdev, Professor Krasso, Bellevue University
+===========================================
+*/
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
