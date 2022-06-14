@@ -1,9 +1,9 @@
 /**
 ============================================
-; Title: Exercise 3.2 - Passing Data to Routes, Part 1
+; Title: Exercise 4.3 - Handling Form Events with Observables
 ; File Name: app.module.ts
 ; Author: Professor Krasso
-; Date: 12 June 2022
+; Date: 19 June 2022
 ; Modified By: Seth Kerrey
 ; Description:
 ;   app module TypeScript
@@ -22,6 +22,7 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { ComposerDetailsComponent } from './composer-details/composer-details.component';
 import { RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,9 @@ import { RouterModule } from '@angular/router';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
