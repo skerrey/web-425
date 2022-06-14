@@ -1,6 +1,6 @@
 /**
 ============================================
-; Title: Exercise 4.2 - Inversion of Control and Dependency Injection
+; Title: Assignment 4.4 - Async Pipe
 ; File Name: composer.class.ts
 ; Author: Professor Krasso
 ; Date: 19 June 2022
@@ -14,6 +14,9 @@
 
 import { Injectable } from '@angular/core';
 import { IComposer } from './composer.interface';
+import { Observable } from 'rxjs';
+import { of } from 'rxjs';
+import { map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -42,8 +45,8 @@ export class ComposerService {
     ]
   }
 
-  getComposers() {
-    return this.composers;
+  getComposers(): Observable<IComposer[]> { // observable array
+    return of(this.composers);
   }
 
   getComposer(composerId: number) {
@@ -52,5 +55,11 @@ export class ComposerService {
         return composer;
       }
     }
+  }
+
+  filterComposers(name: string): Observable<IComposer[]> {
+    return of(this.composers).pipe(map(composers => // pipe = chain functions | map = return new obj array
+      composers.filter(composer => // filters array for fullName
+        composer.fullName.toLowerCase().indexOf(name) > -1)))
   }
 }

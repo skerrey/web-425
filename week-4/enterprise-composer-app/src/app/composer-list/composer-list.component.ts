@@ -1,6 +1,6 @@
 /**
 ============================================
-; Title: Exercise 4.3 - Handling Form Events with Observables
+; Title: Assignment 4.4 - Async Pipe
 ; File Name: composer-list.component.ts
 ; Author: Professor Krasso
 ; Date: 19 June 2022
@@ -9,8 +9,6 @@
 ;   composer-list component TypeScript for app
 ; Resources:
 ;   buwebdev, Professor Krasso, Bellevue University
-;   Stack Overflow Array in Angular
-;     https://stackoverflow.com/questions/47090080/add-items-in-array-angular-4
 ===========================================
 */
 
@@ -19,6 +17,7 @@ import { IComposer } from '../composer.interface';
 import { ComposerService } from '../composer.service';
 import { FormControl } from '@angular/forms';
 import { debounceTime } from 'rxjs';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-composer-list',
@@ -27,7 +26,7 @@ import { debounceTime } from 'rxjs';
 })
 export class ComposerListComponent implements OnInit {
 
-  composers: Array<IComposer>;
+  composers: Observable<IComposer[]>; // observable array of objs
   txtSearchControl = new FormControl(''); // empty string search
 
   constructor(private composerService: ComposerService) { // injectable class added to constructor
@@ -40,7 +39,7 @@ export class ComposerListComponent implements OnInit {
   }
 
   filerComposers(name: string) {
-    alert(name); // display changes to search as alert
+    this.composers = this.composerService.filterComposers(name); // detect & display changes in search | fullName
   }
 
 }

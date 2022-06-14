@@ -1,6 +1,6 @@
 /**
 ============================================
-; Title: Exercise 4.3 - Handling Form Events with Observables
+; Title: Assignment 4.4 - Async Pipe
 ; File Name: app.component.ts
 ; Author: Professor Krasso
 ; Date: 19 June 2022
@@ -20,6 +20,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title: string = 'Reactive Composer App';
-  assignment: string = 'Exercise 4.3 - Handling Form Events with Observables'
+  title: string = 'Enterprise Composer App';
+  assignment: string = 'Assignment 4.4 - Async Pipe'
 }
