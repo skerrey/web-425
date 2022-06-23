@@ -1,13 +1,13 @@
 /**
 ============================================
-; Title: Assignment 5.2 - Navigation and Layout
+; Title: Assignment 5.3 - Data Tables
 ; Author: Professor Krasso
-; Date: 21 June 2022
+; Date: 26 June 2022
 ; Modified By: Seth Kerrey
 ; Description: how to implement navigation using Angular Material
 ; Code Attribution: Additional code from WEB 425 Week 5 exercises and videos
 ;===========================================
- */
+*/
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -25,6 +25,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatIconModule } from '@angular/material/icon';
+import { MatTableModule } from '@angular/material/table';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { MatIconModule } from '@angular/material/icon';
     MatButtonModule,
     MatListModule,
     FlexLayoutModule,
-    MatIconModule
+    MatIconModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
