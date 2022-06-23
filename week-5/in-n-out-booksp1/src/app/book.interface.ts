@@ -1,4 +1,4 @@
-/*
+/**
 ============================================
 ; Title: Assignment 5.2 - Navigation and Layout
 ; Author: Professor Krasso
@@ -7,14 +7,12 @@
 ; Description: how to implement navigation using Angular Material
 ; Code Attribution: Additional code from WEB 425 Week 5 exercises and videos
 ;===========================================
-*/
+ */
 
-.logo {
-  margin-top: 5px;
-}
-
-.main-container {
-  padding-top: 25px;
-  width: 80%;
-  margin: 0 auto;
+export interface IBook {
+  isbn: string;
+  title: string;
+  description: string;
+  numOfPages: number;
+  authors: Array<string>;
 }

@@ -1,4 +1,4 @@
-/*
+/**
 ============================================
 ; Title: Assignment 5.2 - Navigation and Layout
 ; Author: Professor Krasso
@@ -7,14 +7,20 @@
 ; Description: how to implement navigation using Angular Material
 ; Code Attribution: Additional code from WEB 425 Week 5 exercises and videos
 ;===========================================
-*/
+ */
 
-.logo {
-  margin-top: 5px;
-}
+import { Component, OnInit } from '@angular/core';
 
-.main-container {
-  padding-top: 25px;
-  width: 80%;
-  margin: 0 auto;
+@Component({
+  selector: 'app-contact',
+  templateUrl: './contact.component.html',
+  styleUrls: ['./contact.component.scss']
+})
+export class ContactComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
 }
