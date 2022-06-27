@@ -1,6 +1,6 @@
 /**
 ============================================
-; Title: Assignment 5.3 - Data Tables
+; Title: Assignment 5.4 - Dialogs
 ; Author: Professor Krasso
 ; Date: 26 June 2022
 ; Modified By: Seth Kerrey
@@ -26,6 +26,9 @@ import { MatListModule } from '@angular/material/list';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
+import { BookDetailsDialogComponent } from './book-details-dialog/book-details-dialog.component';
+
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -33,7 +36,8 @@ import { MatTableModule } from '@angular/material/table';
     AppComponent,
     BookListComponent,
     ContactComponent,
-    AboutComponent
+    AboutComponent,
+    BookDetailsDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +49,8 @@ import { MatTableModule } from '@angular/material/table';
     MatListModule,
     FlexLayoutModule,
     MatIconModule,
-    MatTableModule
+    MatTableModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

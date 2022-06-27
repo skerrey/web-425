@@ -1,6 +1,6 @@
 /**
 ============================================
-; Title: Assignment 5.3 - Data Tables
+; Title: Assignment 5.4 - Dialogs
 ; Author: Professor Krasso
 ; Date: 26 June 2022
 ; Modified By: Seth Kerrey
@@ -21,7 +21,7 @@ export class AppComponent {
   assignment: string;
 
   constructor() {
-    this.assignment = "Exercise 5.3 - Data Tables"
+    this.assignment = "Assignment 5.4 - Dialogs"
   }
 
 }
