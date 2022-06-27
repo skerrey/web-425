@@ -1,0 +1,25 @@
+<!--
+============================================
+; Title: Exercise 6.2 - Output Properties
+; Author: Professor Krasso
+; Date: 3 July 2022
+; Modified By: Seth Kerrey
+; Description: how to implement Output Properties
+; Code Attribution: Additional code from WEB 425 Week 6 exercises and videos
+;===========================================
+-->
+
+<form fxLayout="column" class="wishlist-create-form">
+
+  <mat-form-field fxFlex appearance="fill">
+    <mat-label>Title</mat-label>
+    <input type="text" name="title" matInput [(ngModel)]="item.title" /><!-- ngModel to capture title from form -->
+  </mat-form-field>
+
+  <mat-form-field fxFlex appearance="fill">
+    <mat-label>Authors</mat-label>
+    <input type="text" name="authors" matInput [(ngModel)]="item.authors" /><!-- ngModel to capture authors from form -->
+  </mat-form-field>
+
+  <button mat-button color="primary" (click)="addItem()">Add item</button>
+</form>

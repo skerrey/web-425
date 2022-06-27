@@ -1,11 +1,11 @@
 /**
 ============================================
-; Title: Assignment 5.4 - Dialogs
+; Title: Exercise 6.2 - Output Properties
 ; Author: Professor Krasso
-; Date: 26 June 2022
+; Date: 3 July 2022
 ; Modified By: Seth Kerrey
-; Description: how to implement navigation using Angular Material
-; Code Attribution: Additional code from WEB 425 Week 5 exercises and videos
+; Description: how to implement Output Properties
+; Code Attribution: Additional code from WEB 425 Week 6 exercises and videos
 ;===========================================
 */
 
@@ -29,6 +29,12 @@ import { MatTableModule } from '@angular/material/table';
 import { BookDetailsDialogComponent } from './book-details-dialog/book-details-dialog.component';
 
 import { MatDialogModule } from '@angular/material/dialog';
+import { WishlistComponent } from './wishlist/wishlist.component';
+import { WishlistCreateComponent } from './wishlist-create/wishlist-create.component';
+
+import { FormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input'
 
 
 @NgModule({
@@ -37,7 +43,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     BookListComponent,
     ContactComponent,
     AboutComponent,
-    BookDetailsDialogComponent
+    BookDetailsDialogComponent,
+    WishlistComponent,
+    WishlistCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +58,10 @@ import { MatDialogModule } from '@angular/material/dialog';
     FlexLayoutModule,
     MatIconModule,
     MatTableModule,
-    MatDialogModule
+    MatDialogModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
