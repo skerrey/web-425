@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
 
   selectableGrades: Array<string> = [
     'A',
-    'A',
+    'A-',
     'B+',
     'B',
     'B-',
@@ -61,27 +61,27 @@ export class HomeComponent implements OnInit {
       switch(entry.grade){
         case 'A': gpa+=4.0;
         break;
-        case 'A-': gpa+=3.7;
+        case 'A-': gpa+=3.70;
         break;
-        case 'B+': gpa+=3.3;
+        case 'B+': gpa+=3.33;
         break;
-        case 'B': gpa+=3.0;
+        case 'B': gpa+=3.00;
         break;
-        case 'B-': gpa+=2.7;
+        case 'B-': gpa+=2.70;
         break;
-        case 'C+': gpa+=2.3;
+        case 'C+': gpa+=2.30;
         break;
-        case 'C': gpa+=2.0;
+        case 'C': gpa+=2.00;
         break;
-        case 'C-': gpa+=1.7;
+        case 'C-': gpa+=1.70;
         break;
-        case 'D+': gpa+=1.3;
+        case 'D+': gpa+=1.30;
         break;
-        case 'D': gpa+=1.0;
+        case 'D': gpa+=1.00;
         break;
-        case 'D-': gpa+=0.7;
+        case 'D-': gpa+=0.70;
         break;
-        case 'F': gpa+=0.0;
+        case 'F': gpa+=0.00;
         break;
       }
     }
