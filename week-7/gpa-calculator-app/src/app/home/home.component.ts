@@ -1,16 +1,17 @@
 /**
 ============================================
-; Title: Assignment 6.4 - Input Properties
+; Title: Assignment 7.3 - Form Validation
 ; Author: Professor Krasso
-; Date: 3 July 2022
+; Date: 10 July 2022
 ; Modified By: Seth Kerrey
-; Description: learning how to create input properties in Angular
-; Code Attribution: Additional code from WEB 425 Week 6 exercises and videos
+; Description: learning how to apply data validation to forms in Angular
+; Code Attribution: Additional code from WEB 425 Week 7 exercises and videos
 ===========================================
 */
 
 import { Component, OnInit } from '@angular/core';
 import { ITranscript } from '../transcript.interface';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -19,7 +20,7 @@ import { ITranscript } from '../transcript.interface';
 })
 export class HomeComponent implements OnInit {
 
-  transcriptEntry: ITranscript;
+  transcriptForm: FormGroup;
 
   selectableGrades: Array<string> = [
     'A',
@@ -40,18 +41,25 @@ export class HomeComponent implements OnInit {
 
   transcriptEntries: Array<ITranscript> = [];
 
-  constructor() {
-    this.transcriptEntry = {} as ITranscript;
+  constructor(private fb: FormBuilder) {
+
    }
 
-  ngOnInit(): void {
+  ngOnInit(): void { // build new form group: course and grade
+    this.transcriptForm = this.fb.group({
+      course: ['', Validators.required ],
+      grade: ['', Validators.required]
+    })
   }
 
-  saveEntry() { // saves the selection of transcript grade value
+  onSubmit(event) { // saves the selection of transcript grade value
 
-    this.transcriptEntries.push(this.transcriptEntry);
-    this.transcriptEntry = {} as ITranscript;
+    this.transcriptEntries.push({
+      course: this.form.course.value,
+      grade: this.form.grade.value
+    });
 
+    event.currentTarget.reset();
   }
 
   calculateResults() { // calculates GPA from input
@@ -91,5 +99,9 @@ export class HomeComponent implements OnInit {
   clearEntries() { // clears gpaTotal
     this.transcriptEntries = [];
     this.gpaTotal = 0;
+  }
+
+  get form() { // returns transcriptForm controls
+    return this.transcriptForm.controls;
   }
 }
