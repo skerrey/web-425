@@ -1,11 +1,11 @@
 /**
 ============================================
-; Title: Assignment 6.4 - Input Properties
+; Title: Assignment 7.2 - Reactive Forms
 ; Author: Professor Krasso
-; Date: 3 July 2022
+; Date: 10 July 2022
 ; Modified By: Seth Kerrey
-; Description: learning how to create input properties in Angular
-; Code Attribution: Additional code from WEB 425 Week 6 exercises and videos
+; Description: learning how to create reactive forms in Angular
+; Code Attribution: Additional code from WEB 425 Week 7 exercises and videos
 ===========================================
 */
 
@@ -29,9 +29,11 @@ import { GradeSummaryComponent } from './grade-summary/grade-summary.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
-import { FormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { SignInComponent } from './sign-in/sign-in.component';
+
+import { CookieService } from 'ngx-cookie-service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -56,7 +58,8 @@ import { SignInComponent } from './sign-in/sign-in.component';
     MatInputModule,
     MatListModule,
     FormsModule,
-    MatSelectModule
+    MatSelectModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,12 +1,12 @@
 <!--
 ============================================
-; Title: Exercise 6.3 - Layouts
+; Title: Assignment 7.2 - Reactive Forms
 ; Author: Professor Krasso
-; Date: 3 July 2022
+; Date: 10 July 2022
 ; Modified By: Seth Kerrey
-; Description: learning how to create reusable layouts in Angular
-; Code Attribution: Additional code from WEB 425 Week 6 exercises and videos
-;===========================================
+; Description: learning how to create reactive forms in Angular
+; Code Attribution: Additional code from WEB 425 Week 7 exercises and videos
+===========================================
 -->
 
 <mat-toolbar color="primary">
@@ -20,6 +20,7 @@
     <div style="width: 80%">
       <div fxLayout="row wrap" fxLayoutAlign="end start">
         <button mat-button routerLink="/">Home</button>
+        <button mat-button (click)="signOut()">Sign Out</button><!-- Sign Out button -->
       </div>
     </div>
   </mat-toolbar-row>
