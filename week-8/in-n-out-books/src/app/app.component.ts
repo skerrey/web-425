@@ -1,13 +1,13 @@
 /**
 ============================================
-; Title: Exercise 6.2 - Output Properties
+; Title: Exercise 8.2 - Server-Side Communications
 ; Author: Professor Krasso
-; Date: 3 July 2022
+; Date: 17 July 2022
 ; Modified By: Seth Kerrey
-; Description: how to implement Output Properties
-; Code Attribution: Additional code from WEB 425 Week 6 exercises and videos
+; Description: how to communicate with a middleware API
+; Code Attribution: Additional code from WEB 425 Week 8 exercises and videos
 ;===========================================
- */
+*/
 
 import { Component } from '@angular/core';
 
@@ -21,7 +21,7 @@ export class AppComponent {
   assignment: string;
 
   constructor() {
-    this.assignment = "Exercise 6.2 - Input/Output Properties, Part 1"
+    this.assignment = "Welcome to In-N-Out-Books"
   }
 
 }

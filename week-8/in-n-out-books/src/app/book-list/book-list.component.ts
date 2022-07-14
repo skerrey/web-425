@@ -1,11 +1,11 @@
 /**
 ============================================
-; Title: Assignment 5.4 - Dialogs
+; Title: Exercise 8.2 - Server-Side Communications
 ; Author: Professor Krasso
-; Date: 26 June 2022
+; Date: 17 July 2022
 ; Modified By: Seth Kerrey
-; Description: how to implement navigation using Angular Material
-; Code Attribution: Additional code from WEB 425 Week 5 exercises and videos
+; Description: how to communicate with a middleware API
+; Code Attribution: Additional code from WEB 425 Week 8 exercises and videos
 ;===========================================
 */
 
@@ -23,19 +23,38 @@ import { BookDetailsDialogComponent } from '../book-details-dialog/book-details-
 })
 export class BookListComponent implements OnInit {
 
-  books: Observable<IBook[]>;
-  header: Array<string> = ['isbn', 'title', 'numOfPages', 'authors']; // craft header
+  books: Array<IBook> = [];
   book: IBook;
 
   constructor(private bookService: BooksService, private dialog: MatDialog) {
-    this.books = this.bookService.getBooks(); // getBooks mapped to array of IBook
+    this.bookService.getBooks().subscribe(res => { // get books properties
+      console.log(res);
+      for (let key in res) {
+        if (res.hasOwnProperty(key)) {
+          let authors = [];
+          if (res[key].details.authors) {
+            authors = res[key].details.authors.map(function(author) {
+              return author.name;
+            })
+          }
+
+          this.books.push({ // push new object into books array
+            isbn: res[key].details.isbn_13 ? res[key].details.isbn_13 : res[key].details.isbn_10,
+            title: res[key].details.title,
+            description: res[key].details.subtitle ? res[key].details.subtitle : 'N/A',
+            numOfPages: res[key].details.number_of_pages,
+            authors: authors
+          })
+        }
+      }
+    });
    }
 
   ngOnInit(): void {
   }
 
   showBookDetails(isbn: string) { // return book details by isbn
-    this.book = this.bookService.getBook(isbn);
+    this.book = this.books.find(book => book.isbn === isbn);
 
     const dialogRef = this.dialog.open(BookDetailsDialogComponent, { // assign to dialog.open
       data: { book: this.book },

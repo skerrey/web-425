@@ -1,78 +1,46 @@
 /**
 ============================================
-; Title: Assignment 5.3 - Data Tables
+; Title: Exercise 8.2 - Server-Side Communications
 ; Author: Professor Krasso
-; Date: 26 June 2022
+; Date: 17 July 2022
 ; Modified By: Seth Kerrey
-; Description: how to implement navigation using Angular Material
-; Code Attribution: Additional code from WEB 425 Week 5 exercises and videos
+; Description: how to communicate with a middleware API
+; Code Attribution: Additional code from WEB 425 Week 8 exercises and videos
 ;===========================================
- */
+*/
 
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { of } from 'rxjs';
 import { map } from 'rxjs';
 import { IBook } from './book.interface';
+import { HttpClient, HttpParams } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BooksService {
 
-  books: Array<IBook>;
+  isbns: Array<string> = [
+    '0345339681',
+    '0261103571',
+    '9780593099322',
+    '9780261102361',
+    '9780261102378',
+    '9780590302715',
+    '9780316769532',
+    '9780743273565',
+    '9780590405959'
+  ];
 
-  constructor() {
-    this.books = [ // instantiate books array
-      {
-        isbn: '0446574724',
-        title: 'Private',
-        description: `The first book in the Private series.`,
-        numOfPages: 400,
-        authors: ['James Patterson', 'Maxine Paetro']
-      },
-      {
-        isbn: '0446617792',
-        title: 'The Angel Experiment',
-        description: `The first book in the Maximum Ride series.`,
-        numOfPages: 464,
-        authors: ['James Patterson']
-      },
-      {
-        isbn: '0446364193',
-        title: 'Along Came A Spider',
-        description: `The first book in the Alex Cross series.`,
-        numOfPages: 528,
-        authors: ['James Patterson']
-      },
-      {
-        isbn: ' 9780446601245',
-        title: 'Kiss the Girls',
-        description: `The second book in the Alex Cross series.`,
-        numOfPages: 496,
-        authors: ['James Patterson']
-      },
-      {
-        isbn: '0446604801',
-        title: 'Jack & Jill',
-        description: `The third book in the Alex Cross Series`,
-        numOfPages: 480,
-        authors: ['James Patterson']
-      },
-    ]
-  }
+  constructor(private http: HttpClient) {  }
 
-  getBooks(): Observable<IBook[]> {  // return entire array of books
-    return of(this.books);
-  }
-
-  getBook(isbn: string): IBook {  // returns book by ISBN
-    for (let book of this.books) {
-      if (book.isbn === isbn) {
-        return book;
-      }
-    }
-    return {} as IBook;
+  getBooks() {  // return array of books
+    let params = new HttpParams();
+    params = params.append('bibkeys', `ISBN:${this.isbns.join(',')}`);
+    params = params.append('format', 'json');
+    params = params.append('jscmd', 'details');
+    return this.http.get('https://openlibrary.org/api/books', {params: params})
   }
 
 }

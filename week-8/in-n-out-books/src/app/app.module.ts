@@ -1,11 +1,11 @@
 /**
 ============================================
-; Title: Exercise 6.2 - Output Properties
+; Title: Exercise 8.2 - Server-Side Communications
 ; Author: Professor Krasso
-; Date: 3 July 2022
+; Date: 17 July 2022
 ; Modified By: Seth Kerrey
-; Description: how to implement Output Properties
-; Code Attribution: Additional code from WEB 425 Week 6 exercises and videos
+; Description: how to communicate with a middleware API
+; Code Attribution: Additional code from WEB 425 Week 8 exercises and videos
 ;===========================================
 */
 
@@ -34,8 +34,10 @@ import { WishlistCreateComponent } from './wishlist-create/wishlist-create.compo
 
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input'
+import { MatInputModule } from '@angular/material/input';
 
+import { HttpClientModule } from '@angular/common/http';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 
 @NgModule({
   declarations: [
@@ -61,7 +63,9 @@ import { MatInputModule } from '@angular/material/input'
     MatDialogModule,
     FormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    HttpClientModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
