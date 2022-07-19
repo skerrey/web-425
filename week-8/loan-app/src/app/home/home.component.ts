@@ -1,17 +1,16 @@
 /**
 ============================================
-; Title: Assignment 8.3 - Capstone (Loan App)
+; Title: Assignment 9.2 - Capstone (Loan App)
 ; Author: Professor Krasso
-; Date: 17 July 2022
+; Date: 24 July 2022
 ; Modified By: Seth Kerrey
-; Description: Loan App
-; Code Attribution: Additional code from WEB 425 Week 8 exercises and videos
-===========================================
+; Description: Loan App Delivery
+; Code Attribution: Additional code from WEB 425 exercises and videos
+;===========================================
 */
 
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { ILoan } from '../loan.interface';
 import { CustomValidator } from '../custom-validator.interface';
 
 @Component({
@@ -23,47 +22,45 @@ export class HomeComponent implements OnInit {
 
   loanForm: FormGroup;
 
-  loanAmount: any;
-  interestRate: any;
-  numOfYears: any;
+  // loanAmount: any;
+  // interestRate: any;
+  // numOfYears: any;
 
-  monthlyPayment: number = 0;
-  interestPaid: number = 0;
-
-  loanEntries: Array<ILoan> = [];
+  monthlyPayment: number;
+  interestPaid: number;
 
   constructor(private fb: FormBuilder) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { // adds validators to form: required & numeric
     this.loanForm = this.fb.group({
-      loanAmount: ['', Validators.required],
-      interestRate: ['', Validators.required ],
-      numOfYears: ['', Validators.required ]
+      loanAmount: ['', Validators.compose([Validators.required, CustomValidator.numeric])],
+      interestRate: ['', Validators.compose([Validators.required, CustomValidator.numeric])],
+      numOfYears: ['', Validators.compose([Validators.required, CustomValidator.numeric])]
     })
 
     console.log(this.loanForm);
   }
 
-  onSubmit() {
-    this.loanEntries.push({
-      loanAmount: this.loanAmount,
-      interestRate: this.interestRate,
-      numOfYears: this.numOfYears
-    })
+  onSubmit() { // binds form to variables & loan calculation
+    const formValues = this.loanForm.value;
+    const loanAmount = parseFloat(formValues.loanAmount);
+    const interestRate = parseFloat(formValues.interestRate);
+    const numOfYears = parseFloat(formValues.numOfYears);
 
-    console.log(this.loanEntries);
+    const numOfMonths = (numOfYears * 12);
+    const ratePerPeriod = ((interestRate / 100) / 12);
+
+    if (!NaN) {
+      this.monthlyPayment = (loanAmount * (ratePerPeriod * Math.pow((ratePerPeriod + 1), numOfMonths))) / (Math.pow((1 + ratePerPeriod), numOfMonths) - 1);
+      this.interestPaid = (this.monthlyPayment * numOfMonths) - loanAmount;
+    }
+
   }
 
-  calculateResults() {
-    this.monthlyPayment = this.loanAmount * (this.interestRate * Math.pow((this.interestRate + 1), this.numOfYears)) / (Math.pow((1 + this.interestRate), this.numOfYears) - 1);
-    this.interestPaid = this.interestRate / (this.numOfYears / 12);
-
-  }
-
-  clearEntries() {
-    this.loanEntries = [];
+  clearEntries() { // clears results
     this.monthlyPayment = 0;
     this.interestPaid = 0;
+    this.loanForm.reset();
   }
 
   get form() {

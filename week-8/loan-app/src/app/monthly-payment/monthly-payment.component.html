@@ -1,20 +1,23 @@
 <!--
 ============================================
-; Title: Assignment 8.3 - Capstone (Loan App)
+; Title: Assignment 9.2 - Capstone (Loan App)
 ; Author: Professor Krasso
-; Date: 17 July 2022
+; Date: 24 July 2022
 ; Modified By: Seth Kerrey
-; Description: Loan App
-; Code Attribution: Additional code from WEB 425 Week 8 exercises and videos
+; Description: Loan App Delivery
+; Code Attribution: Additional code from WEB 425 exercises and videos
 ;===========================================
 -->
 
-<div style="color: #aaaaaa;font-size:24px;">
-  Your monthly payment
+<div class="container">
+  <div style="color: #aaaaaa;font-size:24px;">
+    Your monthly payment:
+  </div>
+  <div style="font-size: 48px;padding-top:30px;">
+    {{ "$" + monthlyPayment.toFixed(2) }}
+  </div>
 </div>
-<div>
-  {{ monthlyPayment }}
-</div>
+
 
 
 

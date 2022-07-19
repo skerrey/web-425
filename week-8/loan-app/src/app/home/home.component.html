@@ -1,11 +1,11 @@
 <!--
 ============================================
-; Title: Assignment 8.3 - Capstone (Loan App)
+; Title: Assignment 9.2 - Capstone (Loan App)
 ; Author: Professor Krasso
-; Date: 17 July 2022
+; Date: 24 July 2022
 ; Modified By: Seth Kerrey
-; Description: Loan App
-; Code Attribution: Additional code from WEB 425 Week 8 exercises and videos
+; Description: Loan App Delivery
+; Code Attribution: Additional code from WEB 425 exercises and videos
 ;===========================================
 -->
 
@@ -41,7 +41,7 @@
                 <input type="text" name="numOfYears" matInput formControlName="numOfYears" />
               </mat-form-field>
 
-              <button type="submit" [disabled]="!loanForm.valid" (click)="calculateResults()" mat-raised-button style="background-color:#2a623d">Submit</button>
+              <button type="submit" [disabled]="!loanForm.valid" mat-raised-button style="background-color:#2a623d">Submit</button>
 
             </form>
 
@@ -57,13 +57,9 @@
 
             <app-monthly-payment [monthlyPayment]="monthlyPayment"></app-monthly-payment>
 
-            <br><br><br><br>
-
             <app-interest-paid [interestPaid]="interestPaid"></app-interest-paid>
 
-            <br><br><br><br>
-
-            <button mat-button (click)="clearEntries()">Clear</button>
+            <button mat-button (click)="clearEntries()" class="clear-button">Clear</button>
           </mat-card-content>
 
         </mat-card>

@@ -19,9 +19,6 @@ import { Component, OnInit, Input } from '@angular/core';
 export class InterestPaidComponent implements OnInit {
 
   @Input() interestPaid: number;
-  @Input() loanAmount: string;
-  @Input() interestRate: string;
-  @Input() numOfYears: string;
 
   constructor() { }
 
