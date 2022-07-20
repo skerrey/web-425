@@ -14,7 +14,7 @@
     Your monthly payment:
   </div>
   <div style="font-size: 48px;padding-top:30px;">
-    {{ "$" + monthlyPayment.toFixed(2) }}
+    {{ "$" + (monthlyPayment | number:'1.2-2') }}
   </div>
 </div>
 

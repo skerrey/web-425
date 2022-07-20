@@ -14,7 +14,7 @@
     Your interest paid:
   </div>
   <div style="font-size:48px; padding-top:30px;">
-    {{ "$" + interestPaid.toFixed(2) }}
+    {{ "$" + (interestPaid | number:'1.2-2') }}
   </div>
 </div>
 

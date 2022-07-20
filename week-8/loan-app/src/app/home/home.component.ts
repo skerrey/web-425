@@ -22,12 +22,8 @@ export class HomeComponent implements OnInit {
 
   loanForm: FormGroup;
 
-  // loanAmount: any;
-  // interestRate: any;
-  // numOfYears: any;
-
-  monthlyPayment: number;
-  interestPaid: number;
+  monthlyPayment: number = 0;
+  interestPaid: number = 0;
 
   constructor(private fb: FormBuilder) { }
 
@@ -38,7 +34,7 @@ export class HomeComponent implements OnInit {
       numOfYears: ['', Validators.compose([Validators.required, CustomValidator.numeric])]
     })
 
-    console.log(this.loanForm);
+    console.log(this.loanForm); // testing values are captured
   }
 
   onSubmit() { // binds form to variables & loan calculation

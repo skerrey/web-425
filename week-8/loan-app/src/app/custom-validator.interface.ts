@@ -12,7 +12,7 @@
 import { AbstractControl } from "@angular/forms";
 export class CustomValidator{
   // Number only validation
-  static numeric(control: AbstractControl) {
+  static numeric(control: AbstractControl) { // input to only accept numeric | code from StackOverflow
     let val = control.value;
 
     if (val === null || val === '') return null;
